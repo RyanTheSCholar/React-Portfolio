@@ -1,7 +1,10 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {NextUIProvider} from '@nextui-org/react'
 import App from "./App.jsx";
 import "./index.css";
+import  Contact  from "./pages/contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Contact',
-        // element: < contact/>
+        element: <Contact/>
       },
       {
         path: '/Resume',
@@ -30,5 +33,10 @@ const router = createBrowserRouter([
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <React.StrictMode>
+    <NextUIProvider>
+      <RouterProvider router={router} />
+    </NextUIProvider>
+  </React.StrictMode>
+  
 );

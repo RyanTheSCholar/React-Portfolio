@@ -1,9 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+// import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/individual";
+import BusinessLogo from "../assets/BusinessLogo1.png";
+// import backgroundIMG from "../assets/backgroundIMGPortfolio.jpg"
 
 const navbarItems = [
   {
     path: "/",
-    pathname: "/",
+    pathname: "About",
   },
   {
     path: "/Portfolio",
@@ -19,23 +22,29 @@ const navbarItems = [
   },
 ];
 
-function Navbar() {
+function Navtab() {
   const currentPage = useLocation().pathname;
 
   return (
-    <ul className="nav navbar">
-      {navbarItems.map((navItem) => (
-        <li key = {navItem.path}>
-          <Link
-            to={navItem.path}
-            className={
-              currentPage === navItem.path ? "nav-link active" : "nav-link"
-            }
-          >{navItem.pathname}</Link>
-        </li>
-      ))}
-    </ul>
+      <div className= "navbarContainer" >
+      <img className="rotate-center" src= {BusinessLogo} alt="Logo" id="logo" />
+      <ul className="nav navbar">
+        {navbarItems.map((navItem) => (
+          <li id = "items" key={navItem.path}>
+            <Link
+              to={navItem.path}
+              className={
+                currentPage === navItem.path ? "nav-link active" : "nav-link"
+              }
+            >
+              {navItem.pathname}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
   );
 }
 
-export default Navbar;
+export default Navtab;

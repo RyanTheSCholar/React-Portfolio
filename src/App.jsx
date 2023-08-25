@@ -3,19 +3,27 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from "react-router-dom";
-import './components/navbar';
-import './components/footer';
+// import Footer from './components/footer';
+import Navtab from './components/navbar';
+import Footer from './components/footer';
+
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      <main className="mx-3">
+      <header>
+        <Navtab />
+      </header>
+      <main >
         <Outlet />
       </main>
-      {/* <footer /> */}
+      <footer>
+        <Footer/>
+      </footer>
+      
     </>
   )
 }
 
 export default App
+// className="mx-3"
