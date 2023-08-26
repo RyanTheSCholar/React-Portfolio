@@ -26,11 +26,23 @@ function Navtab() {
   const currentPage = useLocation().pathname;
 
   return (
-      <div className= "navbarContainer" >
-      <img className="rotate-center" src= {BusinessLogo} alt="Logo" id="logo" />
+    <nav className="navbar-expand-lg">
+      <div className="navbarContainer container-fluid">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <img className="rotate-center" src={BusinessLogo} alt="Logo" id="logo" />
       <ul className="nav navbar">
         {navbarItems.map((navItem) => (
-          <li id = "items" key={navItem.path}>
+          <li id="items" key={navItem.path}>
             <Link
               to={navItem.path}
               className={
@@ -43,6 +55,7 @@ function Navtab() {
         ))}
       </ul>
     </div>
+    </nav>
     
   );
 }
