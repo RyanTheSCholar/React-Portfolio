@@ -13,7 +13,7 @@ function Project({ linkToWebsite, githubRepo, image, projectName }) {
         />
         
       </div>
-      <div>
+      <div className="NT">
         <h2 className="marg-bot">{projectName}</h2>
         <p className="size marg-bot">
           Read about this project through the github icon

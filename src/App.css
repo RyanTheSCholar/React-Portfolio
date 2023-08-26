@@ -268,6 +268,9 @@ background-color: rgb(39, 36, 36);
   font-size: 32px;
   font-family: "mascot-mvb-rough-2", sans-serif ;
 }
+.NT{
+  color: rgb(39, 36, 36);
+}
 #projectIMG{
   height: 400px;
   width: 400px;
@@ -370,4 +373,20 @@ background-color: rgb(39, 36, 36);
 }
 .pTags > p{
   padding-bottom: 1%;
+}
+.aboutContainer{
+  background-color: rgb(39, 36, 36);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.avatarContainer{
+  padding: 5%;
 }

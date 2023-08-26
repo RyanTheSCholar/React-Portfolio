@@ -7,7 +7,7 @@ import "./index.css";
 import  Contact  from "./pages/contact.jsx";
 import Portfolio from "./pages/portfolio.jsx";
 import Resume from "./pages/resume.jsx";
-
+import About from "./pages/about.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <about />
+        element: <About />
       },
       {
         path: '/Portfolio',
