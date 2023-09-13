@@ -7,18 +7,22 @@ const navbarItems = [
   {
     path: "/",
     pathname: "About",
+    id: 1,
   },
   {
     path: "/Portfolio",
     pathname: "Portfolio",
+    id: 2,
   },
   {
     path: "/Contact",
     pathname: "Contact",
+    id: 3,
   },
   {
     path: "/Resume",
     pathname: "Resume",
+    id: 4,
   },
 ];
 
